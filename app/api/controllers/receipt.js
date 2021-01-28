@@ -69,7 +69,7 @@ module.exports = {
             else {
                 res.status(200).json({ msg: "Updated successfully!", data:null});
             }
-        });
+        });   
     },
 
     deleteById: async function(req, res, next) {
