@@ -22,7 +22,7 @@ module.exports = {
             } else{	
                 res.status(200).json({msg: "List found!", data: scheduledmaintenanceasset});							
             }
-        });    
+        });        
     }, 
     getAll: function(req, res, next) {
         scheduledMaintenanceAssetModel.find({}, function(err, scheduledmaintenanceasset){

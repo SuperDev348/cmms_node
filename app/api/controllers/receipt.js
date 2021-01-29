@@ -61,7 +61,7 @@ module.exports = {
         if (req.body.intUpdated !== undefined)
             receipt.intUpdated=req.body.intUpdated;
         if (req.body.strPackingSlip !== undefined)
-            receipt.strPackingSlip=req.body.strPackingSlip;
+            receipt.strPackingSlip=req.body.strPackingSlip;   
         
         receiptModel.findByIdAndUpdate(req.params.receiptId, receipt, function(err, movieInfo){
             if(err)
