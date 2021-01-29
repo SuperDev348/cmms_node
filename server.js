@@ -121,7 +121,7 @@ app.use('/api/movestatus', [authenticate, authError], movestatus);
 app.use('/api/maintenancetype', [authenticate, authError], maintenancetype);
 app.use('/api/moveasset', [authenticate, authError], moveasset);
 app.use('/api/moveback', [authenticate, authError], moveback);
-app.use('/api/movebackasset', [authenticate, authError], movebackasset);  
+app.use('/api/movebackasset', [authenticate, authError], movebackasset);
 app.use('/api/scheduledaudit', [authenticate, authError], scheduledaudit);  
 app.use('/api/priority', [authenticate, authError], priority);  
 app.use('/api/receipt', [authenticate, authError], receipt);  
