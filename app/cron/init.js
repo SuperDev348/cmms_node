@@ -29,7 +29,7 @@ const init = async () => {
           var triggerTime=new Date(triggers[k]);          
           if(currentTime<triggerTime && triggerTime<upperTime){
             console.log('triggered');
-            // start section      
+            // start section
             var data = {
               intPriorityID: result[i].intScheduledMaintenanceID.intPriorityID,
               intWorkOrderStatusID: 4,         
