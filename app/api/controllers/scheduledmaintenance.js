@@ -67,7 +67,7 @@ module.exports = {
 		// 	res.status(400).json({ msg: "Asset cannot be 'a part of' or 'located at' itself" });
 		// 	return
 		// }
-
+       
 		scheduledmaintenanceModel.findByIdAndUpdate(req.params.Id,data, function(err, movieInfo){
 			if(err){
 				console.log(err);
