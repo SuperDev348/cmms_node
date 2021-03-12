@@ -129,7 +129,7 @@ app.use('/api/receiptlineitem', [authenticate, authError], receiptlineitem);
 app.use('/api/receiptstatus', [authenticate, authError], receiptstatus);
 app.use('/api/scheduledmaintenanceasset', [authenticate, authError], scheduledmaintenanceasset);
 // app.use('./api/scheduleda', scheduledaudit);
-// app.get('/favicon.ico', function(req, res) {     
+// app.get('/favicon.ico', function(req, res) {
 //     res.sendStatus(204);
 // });
 
