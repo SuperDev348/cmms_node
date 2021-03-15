@@ -4,7 +4,7 @@ const workOrderModel = require('../api/models/workorder');
 // const moment = require('moment');
 // const request = require('request-promise');
 
-const init = async () => {
+const init = async () => {     
 
   console.log('this is cron');
   var j = schedule.scheduleJob(' */30 * * * *', async function(){
