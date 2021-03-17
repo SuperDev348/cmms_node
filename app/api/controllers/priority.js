@@ -87,7 +87,7 @@ module.exports = {
                 }
                 res.status(400).json({ msg: "Creat failed", data: null});
             }				  
-            else     
+            else
                 res.status(200).json({msg: "Created successfully!", data: {id:result._id}});
 		});
     }
