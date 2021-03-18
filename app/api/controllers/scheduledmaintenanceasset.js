@@ -21,7 +21,7 @@ module.exports = {
                 res.status(500).json({ msg: "Internal Server error." });
             } else{	
                 res.status(200).json({msg: "List found!", data: scheduledmaintenanceasset});							
-            }
+            }      
         });
     }, 
     getAll: function(req, res, next) {

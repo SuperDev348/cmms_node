@@ -13,7 +13,7 @@ const init = async () => {
     await SchedulTriggerModel.find({})
     .populate("intScheduledMaintenanceID")
     .then(function(result){
-      var currentTime=new Date();
+      var currentTime=new Date();     
       console.log(currentTime,'currentTime');
       var upperTime=new Date();
       upperTime.setTime(currentTime.getTime() + (30 * 60 * 1000));     

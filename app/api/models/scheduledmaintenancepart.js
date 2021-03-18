@@ -15,7 +15,7 @@ const ScheduledMaintenancePartSchema = new Schema({
 	intAssetID:{
 		type:Number
 	},
-	intStockID:{
+	intStockID:{    
  		type:Number
 	},
 	qtySuggestedQuantity:{
