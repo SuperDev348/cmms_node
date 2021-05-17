@@ -1,4 +1,4 @@
-     
+
 const businessModel = require('../models/business');					
 
 module.exports = {
