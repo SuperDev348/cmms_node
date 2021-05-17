@@ -19,7 +19,6 @@ module.exports = {
 			} else{				
 				res.status(200).json({msg: "Found!", data: assetcategory});							
 			}
-    
 		});
 	},
 
