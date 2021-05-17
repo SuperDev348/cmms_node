@@ -1,6 +1,6 @@
 
 const assetCategoryModel = require('../models/assetcategory');					
-
+      
 module.exports = {
 	getById: function(req, res, next) {	
 		assetCategoryModel.findById(req.params.Id, function(err, asset){

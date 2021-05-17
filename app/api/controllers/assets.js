@@ -1,4 +1,4 @@
-
+      
 const assetModel = require('../models/assets');					
 const assetNumberIdModel = require('../models/assetId');	
 const assetCategoryModel =require('../models/assetcategory');
