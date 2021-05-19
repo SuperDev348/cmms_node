@@ -1,4 +1,4 @@
-
+     
 const eventtypeModel = require('../models/asseteventtype');					
 
 module.exports = {
