@@ -1,4 +1,4 @@
-     
+
 const assetCategoryModel = require('../models/assetcategory');					
 
 module.exports = {
