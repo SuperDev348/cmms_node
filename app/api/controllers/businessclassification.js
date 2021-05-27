@@ -1,4 +1,4 @@
-    
+
 const businessclassificationModel = require('../models/businessclassification');
 module.exports = {
     getById: async function(req, res, next) {	

@@ -1,4 +1,4 @@
-    
+
 const assetuserModel = require('../models/assetuser');					
 
 module.exports = {
