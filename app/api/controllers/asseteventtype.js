@@ -1,6 +1,6 @@
 
 const eventtypeModel = require('../models/asseteventtype');					
-      
+        
 module.exports = {
 	getById: function(req, res, next) {	
 		eventtypeModel.findById(req.params.Id, function(err, result){
