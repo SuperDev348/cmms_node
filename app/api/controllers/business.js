@@ -10,7 +10,7 @@ module.exports = {
 				res.status(200).json({msg: "Found!", data: result});
 			}
 		});
-	},
+	},     
 	// getAll: function(req, res, next) {
 	// 	businessModel.find({}, function(err, result){
 	// 		if (err){
