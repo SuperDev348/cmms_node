@@ -1,5 +1,5 @@
 
-const businessModel = require('../models/business');					
+const businessModel = require('../models/business');					    
 module.exports = {
 	getById: function(req, res, next) {
 		console.log(req.body);
