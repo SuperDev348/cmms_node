@@ -11,7 +11,6 @@ module.exports = {
 			}
 		});
 	},
-
 	// getAll: function(req, res, next) {
 	// 	businessModel.find({}, function(err, result){
 	// 		if (err){
