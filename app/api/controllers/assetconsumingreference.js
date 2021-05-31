@@ -1,4 +1,4 @@
-       
+
 const assetconsumingreferenceModel = require('../models/assetconsumingreference');
 const assetsModel = require('../models/assets');
 module.exports = {
