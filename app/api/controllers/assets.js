@@ -4,7 +4,7 @@ const assetNumberIdModel = require('../models/assetId');
 const assetCategoryModel =require('../models/assetcategory');
 const accountModel=require('../models/account');
 const chargeDepartmentModel=require('../models/chargedepartment');
-module.exports = {   
+module.exports = {
 	getById: async function(req, res, next) {	
 			
 		// let asset_1 =await assetModel.findById(req.params.assetId).exec();	
