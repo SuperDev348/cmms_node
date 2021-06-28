@@ -1,6 +1,6 @@
 
 const businessModel = require('../models/business');					    
-module.exports = {
+module.exports = {     
 	getById: function(req, res, next) {
 		console.log(req.body);
 		businessModel.findById(req.params.Id, function(err, result){
