@@ -1,4 +1,4 @@
-    
+
 const billingtermModel = require('../models/billingterm');
 module.exports = {
     getById: async function(req, res, next) {	
