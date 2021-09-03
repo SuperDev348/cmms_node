@@ -1,4 +1,4 @@
-   
+
 const filecontentsModel = require('../models/filecontents');
 module.exports = {
     getById: async function(req, res, next) {	
