@@ -1,6 +1,6 @@
 
 const businessUserModel = require('../models/businessuser');					
-  
+
 module.exports = {
 	getAllById: function(req, res, next) {		//get by group id
 		businessUserModel.find({intUserID:req.params.Id})	
