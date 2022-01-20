@@ -12,17 +12,17 @@ module.exports = {
             }
         });
     },
-    getByFilterId :async function(req, res, next) {	
-        var temp_filterIds=req.params.Id;
-        temp_filterIds=temp_filterIds.split(",");
-        assetconsumingreferenceModel.find({intCategoryID:{ $in: temp_filterIds}}, function(err, assetconsumingreferences){
-            if (err){
-                res.status(500).json({ msg: "Internal Server error." });
-            } else{	
-                res.status(200).json({msg: "List found!", data: assetconsumingreferences});							
-            }
-        });
-    }, 
+    // getByFilterId :async function(req, res, next) {	
+    //     var temp_filterIds=req.params.Id;
+    //     temp_filterIds=temp_filterIds.split(",");
+    //     assetconsumingreferenceModel.find({intCategoryID:{ $in: temp_filterIds}}, function(err, assetconsumingreferences){
+    //         if (err){
+    //             res.status(500).json({ msg: "Internal Server error." });
+    //         } else{	
+    //             res.status(200).json({msg: "List found!", data: assetconsumingreferences});							
+    //         }
+    //     });
+    // }, 
     getAll: function(req, res, next) {
         assetconsumingreferenceModel.find({}, function(err, assetconsumingreferences){
             if (err){
