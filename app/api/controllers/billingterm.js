@@ -22,7 +22,7 @@ module.exports = {
             }
         });
     }, 
-    getOne: function(req, res, next) {
+    getAll: function(req, res, next) {
         billingtermModel.find({}, function(err, billingterms){
             if (err){
                 res.status(500).json({ msg: "Internal Server error." });
