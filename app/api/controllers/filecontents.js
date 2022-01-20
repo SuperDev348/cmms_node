@@ -54,15 +54,15 @@ module.exports = {
         });
     },
 
-    deleteById: async function(req, res, next) {
-        filecontentsModel.findByIdAndRemove(req.params.filecontentsId, function(err, movieInfo){
-            if(err)
-                res.status(400).json({ msg: "Delete failed!" });
-            else {
-                res.status(200).json({ msg: "Deleted successfully!"});
-            }
-        });
-    },
+    // deleteById: async function(req, res, next) {
+    //     filecontentsModel.findByIdAndRemove(req.params.filecontentsId, function(err, movieInfo){
+    //         if(err)
+    //             res.status(400).json({ msg: "Delete failed!" });
+    //         else {
+    //             res.status(200).json({ msg: "Deleted successfully!"});
+    //         }
+    //     });
+    // },
 
     create: async function(req, res, next) {
         let filecontents=await filecontentsModel.find({strName:req.body.strName}).exec();	

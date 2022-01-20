@@ -19,17 +19,17 @@ module.exports = {
 		});
 	},
 
-	getAll: function(req, res, next) {
-		businessUserModel.find({intBusinessID:req.params.Id})	
-		.populate("intUserID")		
-		.then(function(data) {		
-		  res.status(200).json({msg: "Found!", data: data});	
-		})
-		.catch(function(err) {		
-		  res.status(500).json({ msg: "Internal Server error" });
-		});
+	// getAll: function(req, res, next) {
+	// 	businessUserModel.find({intBusinessID:req.params.Id})	
+	// 	.populate("intUserID")		
+	// 	.then(function(data) {		
+	// 	  res.status(200).json({msg: "Found!", data: data});	
+	// 	})
+	// 	.catch(function(err) {		
+	// 	  res.status(500).json({ msg: "Internal Server error" });
+	// 	});
 	
-	},
+	// },
 
 	updateById: async function(req, res, next) {
 		
