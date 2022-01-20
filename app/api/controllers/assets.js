@@ -28,17 +28,17 @@ module.exports = {
 	},
 	getByFilterId :async function(req, res, next) {	
 			
-	// 	var temp_filterIds=req.params.Id;
-	// 	temp_filterIds=temp_filterIds.split(",");
-	//   assetModel.find({intCategoryID:{ $in: temp_filterIds}}, function(err, assets){
-	// 		console.log(assets);
-	// 		if (err){
-	// 			res.status(500).json({ msg: "Internal Server error." });
-	// 		} else{				
-	// 			res.status(200).json({msg: "List found!", data: assets});							
-	// 		}
+		var temp_filterIds=req.params.Id;
+		temp_filterIds=temp_filterIds.split(",");
+	  assetModel.find({intCategoryID:{ $in: temp_filterIds}}, function(err, assets){
+			console.log(assets);
+			if (err){
+				res.status(500).json({ msg: "Internal Server error." });
+			} else{				
+				res.status(200).json({msg: "List found!", data: assets});							
+			}
 
-	// 	});
+		});
 	}, 
 	getAll: function(req, res, next) {
 	
