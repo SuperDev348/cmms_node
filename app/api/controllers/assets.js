@@ -5,27 +5,7 @@ const assetCategoryModel =require('../models/assetcategory');
 const accountModel=require('../models/account');
 const chargeDepartmentModel=require('../models/chargedepartment');
 module.exports = {
-	getById: async function(req, res, next) {	
-			
-		// let asset_1 =await assetModel.findById(req.params.assetId).exec();	
-		await assetModel.findById(req.params.assetId, async function(err, asset){
-			if (err) {
-				res.status(400).json({ msg: "Not found" });
-			} else {
-				let assetCategory=await assetCategoryModel.findById(asset.intCategoryID).exec();	
-				let account=await  accountModel.findById(asset.intAccountID).exec();
-				let chargeDepartment=await chargeDepartmentModel.findById(asset.intChargeDepartmentID).exec();
-				let parentAsset=await assetModel.findById(asset.intAssetParentID).exec();
-				let result={};
-				result.assetCategory=assetCategory==null?{}:assetCategory;
-				result.asset=asset;
-				result.account=account==null?{}:account;
-				result.chargeDepartment=chargeDepartment==null?{}:chargeDepartment;
-				result.parentAsset=parentAsset==null?{}:parentAsset;
-				res.status(200).json({msg: "Asset found!", data: result});
-			}
-		});
-	},
+	
 	getByFilterId :async function(req, res, next) {	
 			
 		var temp_filterIds=req.params.Id;
