@@ -2,18 +2,7 @@
 const asseteventModel = require('../models/assetevent');					
 
 module.exports = {
-	getById: function(req, res, next) {
-		asseteventModel.findById(req.params.Id)	
-		.populate("intAssetEventTypeID")
-		.populate("intSubmittedByUserID")
-		.then(function(data) {		
-		  res.status(200).json({msg: "Found!", data: data});	
-		})
-		.catch(function(err) {		
-		  res.status(500).json({ msg: "Internal Server error" });
-		});		
-	},
-
+	
 	getAll: function(req, res, next) {
 		asseteventModel.find({intAssetID:req.params.assetId})	
 		.populate("intAssetEventTypeID")
