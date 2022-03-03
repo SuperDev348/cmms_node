@@ -2,7 +2,15 @@
 const assetCategoryModel = require('../models/assetcategory');					
      
 module.exports = {
-	
+	getById: function(req, res, next) {	
+		assetCategoryModel.findById(req.params.Id, function(err, asset){
+			if (err) {
+				res.status(400).json({ msg: "Not found" });
+			} else {
+				res.status(200).json({msg: "Found!", data: asset});
+			}
+		});
+	},
 
 	getAll: function(req, res, next) {
 		assetCategoryModel.find({}, function(err, assetcategory){
