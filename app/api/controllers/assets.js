@@ -2,8 +2,6 @@
 const assetModel = require('../models/assets');					
 const assetNumberIdModel = require('../models/assetId');	
 const assetCategoryModel =require('../models/assetcategory');
-const accountModel=require('../models/account');
-const chargeDepartmentModel=require('../models/chargedepartment');
 module.exports = {
 	getById: async function(req, res, next) {	
 			
