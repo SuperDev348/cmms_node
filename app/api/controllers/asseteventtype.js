@@ -2,15 +2,6 @@
 const eventtypeModel = require('../models/asseteventtype');					
 
 module.exports = {
-	getById: function(req, res, next) {	
-		eventtypeModel.findById(req.params.Id, function(err, result){
-			if (err) {
-				res.status(400).json({ msg: "Not found" });
-			} else {
-				res.status(200).json({msg: "Found!", data: result});
-			}
-		});
-	},
 
 	getAll: function(req, res, next) {
 		eventtypeModel.find({}, function(err, result){
