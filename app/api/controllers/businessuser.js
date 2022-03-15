@@ -6,6 +6,12 @@ module.exports = {
 		businessUserModel.find({intUserID:req.params.Id})	
 		.populate("intAssetID")		
 		.then(function(data) {		
+			var temp=[];
+			for(var i=0;i<data.length;i++){
+				if(data[i].intAssetID!=null){
+					temp.push(data[i]);
+				}
+			}
 		  res.status(200).json({msg: "Found!", data: temp});	
 		})
 		.catch(function(err) {		

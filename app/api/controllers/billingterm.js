@@ -1,6 +1,16 @@
 
 const billingtermModel = require('../models/billingterm');
 module.exports = {
+    getById: async function(req, res, next) {	
+        await billingtermModel.findById(req.params.billingtermId, async function(err, billingterm){
+            if (err) {
+                res.status(400).json({ msg: "Not found" });
+            } else {
+                let result=billingterm;
+                res.status(200).json({msg: "Asset found!", data: result});
+            }
+        });
+    },
     getByFilterId :async function(req, res, next) {	
         var temp_filterIds=req.params.Id;
         temp_filterIds=temp_filterIds.split(",");
