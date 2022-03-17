@@ -12,6 +12,11 @@ module.exports = {
                     temp.push(data[i]);
                 }
             }
+        res.status(200).json({msg: "Found!", data: temp});	
+        })
+        .catch(function(err) {		
+        res.status(500).json({ msg: "Internal Server error" });
+        });
     },
 
     getAll: function(req, res, next) {
