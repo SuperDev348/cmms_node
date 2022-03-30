@@ -14,19 +14,6 @@ module.exports = {
 		});		
 	},
 
-	getAll: function(req, res, next) {
-		asseteventModel.find({intAssetID:req.params.assetId})	
-		.populate("intAssetEventTypeID")
-		.populate("intSubmittedByUserID")
-		.then(function(data) {		
-		  res.status(200).json({msg: "Found!", data: data});	
-		})
-		.catch(function(err) {		
-		  res.status(500).json({ msg: "Internal Server error" });
-		});
-		
-	},
-
 	updateById: function(req, res, next) {
 		var content={};
 		content.intAssetEventTypeID=req.body.intAssetEventTypeID;
