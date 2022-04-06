@@ -16,8 +16,6 @@ module.exports = {
 		assetCategoryModel.find({}, function(err, assetcategory){
 			if (err){
 				res.status(500).json({ msg: "Internal Server error" });
-			} else{				
-				res.status(200).json({msg: "Found!", data: assetcategory});							
 			}
 		});
 	},
