@@ -21,6 +21,9 @@ module.exports = {
 		.then(function(data) {		
 		  res.status(200).json({msg: "Found!", data: data});	
 		})
+		.catch(function(err) {		
+		  res.status(500).json({ msg: "Internal Server error" });
+		});
 		
 	},
 

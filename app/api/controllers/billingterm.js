@@ -17,8 +17,6 @@ module.exports = {
         billingtermModel.find({intCategoryID:{ $in: temp_filterIds}}, function(err, billingterms){
             if (err){
                 res.status(500).json({ msg: "Internal Server error." });
-            } else{	
-                res.status(200).json({msg: "List found!", data: billingterms});							
             }
         });
     }, 
