@@ -12,17 +12,6 @@ module.exports = {
 		});
 	},
 
-	getAll: function(req, res, next) {
-		eventtypeModel.find({}, function(err, result){
-			if (err){
-				res.status(500).json({ msg: "Internal Server error" });
-			} else{				
-				res.status(200).json({msg: "Result found!", data: result});							
-			}
-
-		});
-	},
-
 	updateById: function(req, res, next) {
 		
 		var content={};
